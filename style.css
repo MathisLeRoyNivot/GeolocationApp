@@ -1,0 +1,46 @@
+.container {
+    margin: 2rem auto;
+    max-width: 50rem;
+    text-align: center;
+  }
+  
+  form {
+    margin: 2.5rem auto;
+  }
+  
+  .find-me.btn {
+    font-family: inherit;
+  }
+  
+  .find-me.btn,
+  .not-on-https,
+  .no-geolocation-support,
+  .coordinates {
+    font-size: 1.5em;
+  }
+  
+  .not-on-https,
+  .no-geolocation-support {
+    display: none;
+  }
+  
+  .coordinates {
+    display: none;
+    margin-bottom: 2.5rem;
+  }
+  
+  .visible {
+    display: block;
+  }
+  
+  #map {
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  #map-canvas {
+    height: 25rem;
+    min-height: 25rem;
+    width: 100%;
+  }
+  
