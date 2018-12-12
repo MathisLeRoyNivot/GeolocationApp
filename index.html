@@ -1,54 +1,35 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/main.css" />
-    <title>Geolocation App</title>
-  </head>
-  <body>
-    <div id="map"></div>
-
-    <!-- CALL SCRIPTS / API -->
-    <script src="js/main.js"></script>
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIcQMMfZafq0PgXiyF5KDPdsmN2Mzwu7A&callback=initMap"
-    ></script>
-  </body>
-</html>
-=======
-<!DOCTYPE:html>
 <head>
-<meta charset="UTF-8">
-<title>app Géoloc</title>
-<script src="script.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8" />
+  <title>app Géoloc</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
-    <div class="container">
-
+  <div class="container">
     <h1>Geolocation API demo</h1>
-  
+
     <form class="form-horizontal">
       <div class="form-group">
-        <button type="button" class="find-me btn btn-info btn-block">Find your location</button>
+        <button type="button" class="find-me btn btn-info btn-block">
+          Find your location
+        </button>
       </div>
     </form>
-  
-    <p class="not-on-https">Not on HTTPS :( Most browsers require HTTPS to run the Geolocation API.</p>
-    <p class="no-geolocation-support">The Geolocation API isn't supported in this browser :(</p>
-  
-    <p class="coordinates">Latitude is <b class="latitude">00.000000°</b>, longitude is <b class="longitude">00.000000°</b>.</p>
-  
-    <div id="map">
-      <div id="map-canvas"></div>
-    </div>
-  
-    </div>
+
+    <p class="not-on-https">
+      Not on HTTPS :( Most browsers require HTTPS to run the Geolocation API.
+    </p>
+    <p class="no-geolocation-support">
+      The Geolocation API isn't supported in this browser :(
+    </p>
+
+    <p class="coordinates">
+      Latitude is <b class="latitude">00.000000°</b>, longitude is
+      <b class="longitude">00.000000°</b>.
+    </p>
+
+    <div id="map"><div id="map-canvas"></div></div>
+  </div>
 </body>
->>>>>>> 045380f3db00bd694fbf427e754ec778ea30303c
