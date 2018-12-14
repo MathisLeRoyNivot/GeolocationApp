@@ -34,7 +34,9 @@ $(document).ready(function($) {
         }
 
         let myPos_serialized = JSON.stringify(myPos);
+        
         localStorage.setItem("Mes positions", myPos_serialized);
+
         let myPos_deserialized = JSON.parse(localStorage.getItem("myPos_serialized"));
         //console.log(myPos_deserialized);
 
