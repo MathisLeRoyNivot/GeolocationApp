@@ -23,6 +23,13 @@
     <meta name="theme-color" content="#ffffff">
     <!-- STYLE -->
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- STYLE - UI KIT -->
+    <link rel="stylesheet" type="text/css" href="css/uikit.css" />
+    <link rel="stylesheet" type="text/css" href="css/uikit.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/uikit-rtl.css" />
+    <link rel="stylesheet" type="text/css" href="css/uikit-rtl.min.css" />
+    
+    
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"/>
   </head>
 
@@ -32,7 +39,7 @@
       <h1>Application Géolocalisation</h1>
       <form class="form-horizontal">
         <div class="form-group">
-          <button type="button" class="find-me btn btn-info btn-block">Trouver ma position</button>
+          <button type="button" class="find-me btn">Trouver ma position</button>
         </div>
       </form>
         
@@ -40,7 +47,7 @@
       <p class="no-geolocation-support">The Geolocation API isn't supported in this browser :(</p>
 
 
-      <table>
+      <table class="uk-table">
 
         <tr>
           <th>Latitude</th>
