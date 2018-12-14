@@ -21,9 +21,21 @@ $(document).ready(function($) {
         var lat = position.coords.latitude;
         var lng = position.coords.longitude;
 
+        console.log("Latitude : " + lat);
+        console.log("Longitude : " + lng);
+
         $('.latitude').text(lat.toFixed(6) + '°');
         $('.longitude').text(lng.toFixed(6) + '°');
         $('.coordinates').addClass('visible');
+
+        let myPos = {
+          latitude: lat,
+          longitude: lng
+        }
+
+        let myPos_serialized = JSON.stringify(myPos);
+        localStorage.setItem("Mes positions", myPos_serialized);
+        console.log(localStorage);
 
         // Create a map and place a marker at the current location
           // https://developers.google.com/maps/documentation/javascript/reference
