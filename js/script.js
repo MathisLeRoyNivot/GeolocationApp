@@ -29,13 +29,15 @@ $(document).ready(function($) {
         $('.coordinates').addClass('visible');
 
         let myPos = {
-          latitude: lat,
-          longitude: lng
+          Latitude: lat,
+          Longitude: lng
         }
 
         let myPos_serialized = JSON.stringify(myPos);
         localStorage.setItem("Mes positions", myPos_serialized);
-        console.log(localStorage);
+        let myPos_deserialized = JSON.parse(localStorage.getItem("myPos_serialized"));
+        //console.log(myPos_deserialized);
+
 
         // Create a map and place a marker at the current location
           // https://developers.google.com/maps/documentation/javascript/reference
