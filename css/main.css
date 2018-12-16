@@ -5,6 +5,10 @@ body {
   width: 100%;
 }
 
+.main-container {
+  width: 100%;
+}
+
 #map {
   height: 10px;
   width: 100%;

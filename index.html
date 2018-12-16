@@ -35,35 +35,39 @@
 
   <body>
     
-    <div class="container">
+    <div class="main-container">
+
+      <!-- CARTE AFFICHAGE -->
       <h1>Application Géolocalisation</h1>
-      <form class="form-horizontal">
-        <div class="form-group">
-          <button type="button" class="find-me btn">Trouver ma position</button>
-        </div>
-      </form>
+      <div class="form-group">
+        <button type="button" class="find-me uk-button uk-button-primary">Trouver ma position</button>
+      </div>
         
       <p class="not-on-https">Not on HTTPS :( Most browsers require HTTPS to run the Geolocation API.</p>
       <p class="no-geolocation-support">The Geolocation API isn't supported in this browser :(</p>
 
 
-      <table class="uk-table">
-
-        <tr>
-          <th>Latitude</th>
-          <th>Longitude</th>
-        </tr>
-
-        <tr>
-          <td class="latitude">00.000000°</td>
-          <td class="longitude">00.000000°</td>
-        </tr>
-
+      <!-- TABLEAU LATITUDE & LONGITUDE -->
+      <table class="uk-table uk-table-striped">
+        <thead>
+          <tr>
+            <th>Latitude</th>
+            <th>Longitude</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="latitude">00.000000°</td>
+            <td class="longitude">00.000000°</td>
+          </tr>
+        </tbody>
       </table>
       
+      <!-- CARTE AFFICHAGE -->
       <div id="map">
         <div id="map-canvas"></div>
       </div>
+
     </div>
     
     <!-- SCRIPTS -->
