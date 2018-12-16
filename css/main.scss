@@ -5,16 +5,46 @@ body {
   width: 100%;
 }
 
-.main-container {
-  height: 100vh;
-  width: 100%;
+button {
+  font-family: inherit;
+  font-size: 1.5em;
 }
 
-table {
-  max-width: 500px;
+.header {
+  height: 20vh;
+}
+
+#btn-find {
+  margin-top: 30px;
 }
 
 #map {
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-container {
   height: 100vh;
+  max-width: 1920px;
+  width: 100%;
+  text-align: center;
+}
+
+table {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+table th {
+  text-align: center;
+}
+
+#map {
+  height: 80vh;
+  width: 100%;
+}
+
+#map-canvas {
+  height: 90%;
   width: 100%;
 }
