@@ -33,8 +33,7 @@
   <body>
     
     <div class="main-container">
-      <div id="lastPos" >
-      </div>
+      
 
       <!-- CARTE AFFICHAGE -->
       <div class="header">
@@ -55,12 +54,29 @@
             </tr>
           </tbody>
         </table>
-      </div>      
-     
+      </div>
+       
       <!-- CARTE AFFICHAGE -->
       <div id="map">
         <div id="map-canvas"></div>
       </div>
+
+      <div id="lastPos" >
+          <table>
+            <thead>
+              <tr>
+                <th>Latitude</th>
+                <th>Longitude</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="lastLat"></td>
+                <td id="lastLng"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
     </div>
     

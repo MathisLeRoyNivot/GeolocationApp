@@ -34,10 +34,16 @@ button {
 table {
   margin: 0 auto;
   max-width: 600px;
+  border: 1px solid black;
 }
 
 table th {
   text-align: center;
+  border: 1px solid black;
+}
+
+table td {
+  border: 1px solid black;
 }
 
 #map {

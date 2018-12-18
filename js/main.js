@@ -41,8 +41,8 @@ $(document).ready(function($) {
         console.log(iPos); 
 
         for (let index = iPos; index > 0 ; index--) {
-          document.getElementById("lastPos").innerHTML += myPos_deserialized.Latitude + " ";
-          document.getElementById("lastPos").innerHTML += myPos_deserialized.Longitude;
+          document.getElementById("lastLat").innerHTML += myPos_deserialized.Latitude;
+          document.getElementById("lastLng").innerHTML += myPos_deserialized.Longitude;
         }
 
 
