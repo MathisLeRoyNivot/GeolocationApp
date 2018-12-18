@@ -42,9 +42,20 @@ $(document).ready(function($) {
         console.log(myPos_deserialized);
         console.log(iPos); 
 
-        for (let index = iPos; index > 0 ; index--) {
-          document.getElementById("lastPos").innerHTML += myPos_deserialized.Latitude + " ";
-          document.getElementById("lastPos").innerHTML += myPos_deserialized.Longitude;
+        for (let index = 1; index < iPos ; index++) {
+          var tableau = document.getElementById("tableauPos");
+          
+          var ligne = tableau.insertRow(index);
+          var colonne1 = ligne.insertCell(0);
+          var colonne2 = ligne.insertCell(1);
+          var colonne3 = ligne.insertCell(2);
+          if (index < iPos - 1 ) {
+            tableau.deleteRow(index);
+          }
+
+          colonne1.innerHTML = index;
+          colonne2.innerHTML = myPos_deserialized.Latitude;
+          colonne3.innerHTML = myPos_deserialized.Longitude;
         }
 
 
