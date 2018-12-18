@@ -8,7 +8,6 @@ $(document).ready(function($) {
     $findMeBtn.addClass('disabled');
     $('.no-geolocation-support').addClass('visible');
 
-  // Check if the page is accessed over HTTPS
   } else {
 
     $findMeBtn.on('click', function(e) {
@@ -26,7 +25,6 @@ $(document).ready(function($) {
 
         $('.latitude').text(lat.toFixed(6) + '°');
         $('.longitude').text(lng.toFixed(6) + '°');
-        $('.coordinates').addClass('visible');
 
         let myPos = {
           Latitude: lat,
