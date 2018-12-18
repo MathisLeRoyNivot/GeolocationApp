@@ -1,13 +1,23 @@
+var iPos = 0; 
+var span = document.getElementById("lastPos");
+var txt = document.createTextNode(JSON.parse(localStorage.getItem(index).toString));
+  
+for (let index = iPos; index > 0 ; index--) {
+  span.appendChild(txt);
+    
+}
+
 $(document).ready(function($) {
 
   var $findMeBtn = $('.find-me');
-  var iPos = 0;
+  
   // Check if browser supports the Geolocation API
   if (!navigator.geolocation) {
 
     $findMeBtn.addClass('disabled');
     $('.no-geolocation-support').addClass('visible');
 
+  // Check if the page is accessed over HTTPS
   } else {
 
     $findMeBtn.on('click', function(e) {
@@ -25,6 +35,7 @@ $(document).ready(function($) {
 
         $('.latitude').text(lat.toFixed(6) + '°');
         $('.longitude').text(lng.toFixed(6) + '°');
+        $('.coordinates').addClass('visible');
 
         let myPos = {
           Latitude: lat,
@@ -33,17 +44,13 @@ $(document).ready(function($) {
         
         let myPos_serialized = JSON.stringify(myPos); 
         localStorage.setItem(iPos, myPos_serialized);
-        let myPos_deserialized = JSON.parse(localStorage.getItem(iPos));
         iPos += 1;
-        
+        let myPos_deserialized = JSON.parse(localStorage.getItem(iPos));
       
         console.log(myPos_deserialized);
-        console.log(iPos); 
-
-        for (let index = iPos; index > 0 ; index--) {
-          document.getElementById("lastPos").innerHTML += myPos_deserialized.Latitude + " ";
-          document.getElementById("lastPos").innerHTML += myPos_deserialized.Longitude;
-        }
+        console.log(iPos); ;
+        
+        
 
 
         // Create a map and place a marker at the current location
