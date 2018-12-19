@@ -19,6 +19,32 @@ h3 {
   margin-bottom: 0px;
 }
 
+.main-container {
+  display: flex;
+  height: 100vh;
+  max-width: 1920px;
+  width: 100%;
+  text-align: center;
+}
+
+// MAP STYLE
+#map {
+  height: 100vh;
+  width: 75%;
+}
+
+#map-canvas {
+  height: 100%;
+  width: 100%;
+}
+
+
+// PANEL STYLE
+.left-panel {
+  height: 100vh;
+  width: 25%;
+}
+
 #btn-find {
   cursor: pointer;
   margin-top: 50vh;
@@ -26,17 +52,11 @@ h3 {
   z-index: 1;
 }
 
-#map {
-  margin: 0 auto;
-  position: relative;
+select {
+  height: 40px;
+  width: 60%;
 }
 
-.main-container {
-  height: 100vh;
-  max-width: 1920px;
-  width: 100%;
-  text-align: center;
-}
 
 #myLastPos, #myCurrentPos {
   display: none;
@@ -44,15 +64,6 @@ h3 {
 
 table {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 90%
 }
 
-#map {
-  height: 70vh;
-  width: 100%;
-}
-
-#map-canvas {
-  height: 100%;
-  width: 100%;
-}

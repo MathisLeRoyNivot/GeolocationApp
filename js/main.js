@@ -59,6 +59,8 @@ $(document).ready(function($) {
         document.getElementById("myCurrentPos").style.display = "block";
         document.getElementById("myLastPos").style.display = "block";
 
+       
+
 
         // Create a map and place a marker at the current location
         // https://developers.google.com/maps/documentation/javascript/reference
