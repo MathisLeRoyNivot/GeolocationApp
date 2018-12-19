@@ -2,7 +2,7 @@ $(document).ready(function($) {
 
   var $findMeBtn = $('.find-me');
   var iPos = 0;
-  // Check if browser supports the Geolocation API
+  // vérifier que le navigateur supporte l'API
   if (!navigator.geolocation) {
 
     $findMeBtn.addClass('disabled');
@@ -16,7 +16,7 @@ $(document).ready(function($) {
 
       navigator.geolocation.getCurrentPosition(function(position) {
 
-        // Get the location coordinates
+        // récupérer les coordonnées
         var lat = position.coords.latitude;
         var lng = position.coords.longitude;
 
@@ -35,34 +35,30 @@ $(document).ready(function($) {
         localStorage.setItem(iPos, myPos_serialized);
         let myPos_deserialized = JSON.parse(localStorage.getItem(iPos));
         iPos += 1;
-        
-      
-        console.log(myPos_deserialized);
-        console.log(iPos); 
 
-        for (let index = iPos; index <= iPos ; index++) {
-          var tableau = document.getElementById("tableauPos");
-          
-          var ligne = tableau.insertRow(index);
-          var colonne1 = ligne.insertCell(0);
-          var colonne2 = ligne.insertCell(1);
-          var colonne3 = ligne.insertCell(2);
-          
+        //récupérer une référence au tableau 
+        var tableau = document.getElementById("tableauPos");
 
-          colonne1.innerHTML = index;
-          colonne2.innerHTML = myPos_deserialized.Latitude;
-          colonne3.innerHTML = myPos_deserialized.Longitude;
+        //ajout d'une ligne au tableau 
+        var ligne = tableau.insertRow(iPos);
+        var colonne1 = ligne.insertCell(0);
+        var colonne2 = ligne.insertCell(1);
+        var colonne3 = ligne.insertCell(2);
+
+        //remplir la ligne du tableau avec les coordonées
+        colonne1.innerHTML = iPos;
+        colonne2.innerHTML = myPos_deserialized.Latitude;
+        colonne3.innerHTML = myPos_deserialized.Longitude;
+
+        if ($(window).width() >900) {
+          document.getElementById("btn-find").style.marginTop = "30px";
         }
 
         // Ajouter une propriété CSS à un élément HTML
-        document.getElementById("btn-find").style.marginTop = "30px";
         document.getElementById("myCurrentPos").style.display = "block";
         document.getElementById("myLastPos").style.display = "block";
 
-       
-
-
-        // Create a map and place a marker at the current location
+        // Créer une carte et placer un marqueur aux coordonnées récupérées
         // https://developers.google.com/maps/documentation/javascript/reference
 
         var mapLatLng = new google.maps.LatLng(lat, lng);
@@ -81,7 +77,7 @@ $(document).ready(function($) {
           title: 'Your browser/device places you here',
         });
 
-        // Re-center the map on user location when window/viewport resizes
+        // recentrer la carte sur notre position
         $(window).resize(function() {
           google.maps.event.trigger(map, 'resize');
           map.panTo(mapLatLng);
