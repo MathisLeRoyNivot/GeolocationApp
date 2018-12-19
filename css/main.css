@@ -65,4 +65,42 @@ table {
   margin: 0 auto;
   max-width: 90%;
 }
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 900px) {
+  .main-container {
+    display: block;
+    height: 100vh;
+  }
+  #map {
+    height: 70vh;
+    width: 100%;
+  }
+  #map-canvas {
+    height: 100%;
+    width: 100%;
+  }
+  .left-panel {
+    height: 30vh;
+    width: 100%;
+  }
+  #btn-find {
+    cursor: pointer;
+    margin-top: 50vh;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    z-index: 1;
+  }
+  select {
+    height: 40px;
+    width: 60%;
+  }
+  #myLastPos, #myCurrentPos {
+    display: none;
+  }
+  table {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+}
 /*# sourceMappingURL=main.css.map */
