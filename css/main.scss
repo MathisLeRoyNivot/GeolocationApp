@@ -16,7 +16,10 @@ button {
 }
 
 #btn-find {
-  margin-top: 30px;
+  cursor: pointer;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
 #map {
@@ -31,19 +34,13 @@ button {
   text-align: center;
 }
 
+#myLastPos, #myCurrentPos {
+  display: none;
+}
+
 table {
   margin: 0 auto;
   max-width: 600px;
-  border: 1px solid black;
-}
-
-table th {
-  text-align: center;
-  border: 1px solid black;
-}
-
-table td {
-  border: 1px solid black;
 }
 
 #map {

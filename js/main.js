@@ -40,14 +40,28 @@ $(document).ready(function($) {
         console.log(myPos_deserialized);
         console.log(iPos); 
 
-        for (let index = iPos; index > 0 ; index--) {
-          document.getElementById("lastLat").innerHTML += myPos_deserialized.Latitude;
-          document.getElementById("lastLng").innerHTML += myPos_deserialized.Longitude;
+        for (let index = iPos; index <= iPos ; index++) {
+          var tableau = document.getElementById("tableauPos");
+          
+          var ligne = tableau.insertRow(index);
+          var colonne1 = ligne.insertCell(0);
+          var colonne2 = ligne.insertCell(1);
+          var colonne3 = ligne.insertCell(2);
+          
+
+          colonne1.innerHTML = index;
+          colonne2.innerHTML = myPos_deserialized.Latitude;
+          colonne3.innerHTML = myPos_deserialized.Longitude;
         }
+
+        // Ajouter une propriété CSS à un élément HTML
+        document.getElementById("btn-find").style.marginTop = "30px";
+        document.getElementById("myCurrentPos").style.display = "block";
+        document.getElementById("myLastPos").style.display = "block";
 
 
         // Create a map and place a marker at the current location
-          // https://developers.google.com/maps/documentation/javascript/reference
+        // https://developers.google.com/maps/documentation/javascript/reference
 
         var mapLatLng = new google.maps.LatLng(lat, lng);
 

@@ -33,36 +33,15 @@
   <body>
     
     <div class="main-container">
-      
 
       <!-- CARTE AFFICHAGE -->
       <div class="header">
         <button type="button" id="btn-find" class="find-me uk-button uk-button-primary">Trouver ma position</button>
 
         <!-- TABLEAU LATITUDE & LONGITUDE -->
-        <table class="uk-table uk-table-striped">
-          <thead>
-            <tr>
-              <th>Latitude</th>
-              <th>Longitude</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="latitude">00.000000°</td>
-              <td class="longitude">00.000000°</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-       
-      <!-- CARTE AFFICHAGE -->
-      <div id="map">
-        <div id="map-canvas"></div>
-      </div>
-
-      <div id="lastPos" >
-          <table>
+        <div id="myCurrentPos">
+          <h3>Votre position actuelle</h3>
+          <table class="uk-table uk-table-striped" id="myPos">
             <thead>
               <tr>
                 <th>Latitude</th>
@@ -71,14 +50,38 @@
             </thead>
             <tbody>
               <tr>
-                <td id="lastLat"></td>
-                <td id="lastLng"></td>
+                <td class="latitude">00.000000°</td>
+                <td class="longitude">00.000000°</td>
               </tr>
             </tbody>
           </table>
         </div>
+        
+      </div>      
+     
+      <!-- CARTE AFFICHAGE -->
+      <div id="map">
+        <div id="map-canvas"></div>
+      </div>
 
+      <div id="myLastPos">
+          <h3>Mes dernières positions</h3>
+          <table class="uk-table uk-table-striped" id="tableauPos">
+            <thead>
+              <tr>
+                <th>N°</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>           
+              </tr>
+            </tbody>
+          </table>
+        </div>
     </div>
+      
     
     <!-- SCRIPTS -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKpALzGmm_SgdVaASYajnjy00DjfjkdyA"></script>
