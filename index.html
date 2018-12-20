@@ -1,93 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Géolocalisation</title>
-    <!-- FAVICONS -->
-    <link rel="apple-touch-icon" sizes="57x57" href="icons/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="icons/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="icons/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="icons/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="icons/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="icons/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="icons/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="icons/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="icons/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicons/favicon-16x16.png">
-    <link rel="manifest" href="icons/favicons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="icons/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <!-- STYLE -->
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <!-- STYLE - UI KIT -->
-    <link rel="stylesheet" type="text/css" href="css/uikit.css" />
-    <link rel="stylesheet" type="text/css" href="css/uikit.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/uikit-rtl.css" />
-    <link rel="stylesheet" type="text/css" href="css/uikit-rtl.min.css" />
-  </head>
 
-  <body>
-    
-    <div class="main-container">
+<head>
+  <meta charset="UTF-8" />
+  <title>NETEDIA | Géolocalisation</title>
+  <!-- FAVICONS -->
+  <link rel="apple-touch-icon" sizes="57x57" href="icons/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="icons/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="icons/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="icons/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="icons/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="icons/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="icons/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicons/favicon-16x16.png">
+  <link rel="manifest" href="icons/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="icons/favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- STYLE -->
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <!-- STYLE - UI KIT -->
+  <link rel="stylesheet" type="text/css" href="css/uikit.css" />
+  <link rel="stylesheet" type="text/css" href="css/uikit.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/uikit-rtl.css" />
+  <link rel="stylesheet" type="text/css" href="css/uikit-rtl.min.css" />
+</head>
 
-      <div class="left-panel">
+<body>
 
-          <button type="button" id="btn-find" class="find-me uk-button uk-button-primary">Trouver ma position</button>
-          
-          <!-- TABLEAU LATITUDE & LONGITUDE -->
-          <div id="myCurrentPos">
-            <h3>Votre position actuelle</h3>
-            <table class="uk-table uk-table-striped" id="myPos">
-              <thead>
-                <tr>
-                  <th>Latitude</th>
-                  <th>Longitude</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="latitude">00.000000°</td>
-                  <td class="longitude">00.000000°</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-         
-        <!-- TABLEAU DERNIERE POSITIONS -->
-        <div id="myLastPos">
-            <h3>Mes dernières positions</h3>
-            <table class="uk-table uk-table-striped" id="tableauPos">
-              <thead>
-                <tr>
-                  <th>N°</th>
-                  <th>Latitude</th>
-                  <th>Longitude</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>           
-                </tr>
-              </tbody>
-            </table>
-          </div>
+  <div class="main-container">
 
-      </div>
-      
-      <!-- CARTE AFFICHAGE -->
-      <div id="map">
-        <div id="map-canvas"></div>
+    <div class="left-panel">
+
+      <button type="button" id="btn-find" class="find-me uk-button uk-button-primary">Trouver ma position</button>
+
+      <!-- TABLEAU LATITUDE & LONGITUDE -->
+      <div id="myCurrentPos">
+        <h3>Votre position actuelle</h3>
+        <table class="uk-table uk-table-striped" id="myPos">
+          <thead>
+            <tr>
+              <th>Latitude</th>
+              <th>Longitude</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="latitude">00.000000°</td>
+              <td class="longitude">00.000000°</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
+      <!-- TABLEAU DERNIERE POSITIONS -->
+      <div id="myLastPos">
+        <h3>Vos dernières positions</h3>
+        <div class="scrollview-table">
+          <table class="uk-table uk-table-striped" id="tableauPos">
+            <thead>
+              <tr>
+                <th>N°</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-      
-    
-    <!-- SCRIPTS -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKpALzGmm_SgdVaASYajnjy00DjfjkdyA"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+
+    <!-- CARTE AFFICHAGE -->
+    <div id="map">
+      <div id="map-canvas"></div>
+    </div>
+
+  </div>
+
+
+  <!-- SCRIPTS -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKpALzGmm_SgdVaASYajnjy00DjfjkdyA"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>

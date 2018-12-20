@@ -1,60 +1,74 @@
-@media screen and (min-width: 901px) {
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  button {
-    font-family: inherit;
-    font-size: 1.5em;
-  }
-  .header {
-    height: 20vh;
-    margin-bottom: 10vh;
-  }
-  h3 {
-    margin-bottom: 0px;
-  }
-  .main-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100vh;
-    max-width: 1920px;
-    width: 100%;
-    text-align: center;
-  }
-  #map {
-    height: 100vh;
-    width: 75%;
-  }
-  #map-canvas {
-    height: 100%;
-    width: 100%;
-  }
-  .left-panel {
-    height: 100vh;
-    width: 25%;
-  }
-  #btn-find {
-    cursor: pointer;
-    margin-top: 50vh;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    z-index: 1;
-  }
-  select {
-    height: 40px;
-    width: 60%;
-  }
-  #myLastPos, #myCurrentPos {
-    display: none;
-  }
-  table {
-    margin: 0 auto;
-    max-width: 90%;
-  }
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1.5em;
+}
+
+h3 {
+  margin-bottom: 0px;
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  max-width: 1920px;
+  text-align: center;
+  width: 100%;
+}
+
+.left-panel {
+  height: 100vh;
+  width: 25%;
+}
+
+#btn-find {
+  cursor: pointer;
+  margin-top: 50vh;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 1;
+}
+
+.scrollview-table {
+  height: 80%;
+  overflow: scroll;
+  width: 100%;
+}
+
+#myCurrentPos {
+  height: 30vh;
+}
+
+#myLastPos {
+  height: 70vh;
+}
+
+#myLastPos,
+#myCurrentPos {
+  display: none;
+}
+
+table {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+#map {
+  height: 100vh;
+  width: 75%;
+}
+
+#map-canvas {
+  height: 100%;
+  width: 100%;
 }
 
 /* MEDIA QUERIES */
@@ -85,9 +99,6 @@
   select {
     height: 40px;
     width: 60%;
-  }
-  #myLastPos, #myCurrentPos {
-    display: none;
   }
   table {
     margin: 0 auto;

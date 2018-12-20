@@ -50,7 +50,7 @@ $(document).ready(function($) {
         colonne2.innerHTML = myPos_deserialized.Latitude;
         colonne3.innerHTML = myPos_deserialized.Longitude;
 
-        if ($(window).width() >900) {
+        if ($(window).width() > 900) {
           document.getElementById("btn-find").style.marginTop = "30px";
         }
 
