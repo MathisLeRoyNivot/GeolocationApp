@@ -1,7 +1,7 @@
 # GeolocationApp
 Projet #2 - Geolocation Application
 
-App availible on :
+App available on :
   - Website RWD
   - Desktop App
   - Mobile App 
