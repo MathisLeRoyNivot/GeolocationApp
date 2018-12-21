@@ -1,122 +1,124 @@
-
-@media screen and (min-width: 901px) {
-
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-
-  button {
-    font-family: inherit;
-    font-size: 1.5em;
-  }
-
-  .header {
-    height: 20vh;
-    margin-bottom: 10vh
-  }
-
-  h3 {
-    margin-bottom: 0px;
-  }
-
-  .main-container {
-    display: flex;
-    height: 100vh;
-    max-width: 1920px;
-    width: 100%;
-    text-align: center;
-  }
-
-  // MAP STYLE
-  #map {
-    height: 100vh;
-    width: 75%;
-  }
-
-  #map-canvas {
-    height: 100%;
-    width: 100%;
-  }
-
-
-  // PANEL STYLE
-  .left-panel {
-    height: 100vh;
-    width: 25%;
-  }
-
-  #btn-find {
-    cursor: pointer;
-    margin-top: 50vh;
-    transform: translateY(-50%);
-    z-index: 1;
-  }
-
-  select {
-    height: 40px;
-    width: 60%;
-  }
-
-
-  #myLastPos, #myCurrentPos {
-    display: none;
-  }
-
-  table {
-    margin: 0 auto;
-    max-width: 90%
-  }
+// GENERAL STYLE
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
+
+button {
+  font-family: inherit;
+  font-size: 1.5em;
+}
+
+h3 {
+  margin-bottom: 0px;
+}
+
+// LEFT PANNEL
+.main-container {
+  display: flex;
+  height: 100vh;
+  max-width: 1920px;
+  text-align: center;
+  width: 100%;
+}
+
+.left-panel {
+  height: 100vh;
+  width: 25%;
+}
+
+#btn-find {
+  cursor: pointer;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.scrollview-table {
+  height: 80%;
+  overflow: scroll;
+  width: 100%;
+}
+
+#myCurrentPos {
+  height: 25vh;
+}
+
+#myLastPos {
+  height: 65vh;
+  margin-bottom: 0px;
+}
+
+#myLastPos,
+#myCurrentPos {
+  display: none;
+}
+
+table {
+  margin: 0 auto;
+  max-width: 90%
+}
+
+// MAP STYLE
+#map {
+  height: 100vh;
+  width: 75%;
+}
+
+#map-canvas {
+  height: 100%;
+  width: 100%;
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 900px) {
   .main-container {
-    display: block;
-    height: 100vh;
-  }
-
+      display: block;
+      height: 100vh;
+  } 
+  
   // MAP STYLE
   #map {
-    height: 70vh;
-    width: 100%;
+      height: 100vh;
+      width: 100%;
   }
 
   #map-canvas {
-    height: 100%;
-    width: 100%;
-  }
-
-
-  // PANEL STYLE
+      height: 100%;
+      width: 100%;
+  } // PANEL STYLE
   .left-panel {
-    width: 100%;
-    h3 {
-      text-align: center;
-      font-size: 4vh;
-    }
+      width: 100%;
   }
 
+  h3 {
+      text-align: center;
+      font-size: 1em;
+  }
+  
   #btn-find {
-    z-index: 1;
-    width: 100%;
+      margin-top: 30px;
+      z-index: 1;
+  }
+
+  #myLastPos,
+  #myCurrentPos {
+      display: none;
+  }
+
+  #map {
+      display: none;
   }
 
   select {
-    height: 40px;
-    width: 60%;
-    
+      height: 40px;
+      width: 60%;
   }
-
-
-  #myLastPos, #myCurrentPos {
-    display: none;
-  }
-
   table {
-    margin: 0 auto;
-    max-width: 90%
+      margin: 0 auto;
+      width: 100%
   }
 }
