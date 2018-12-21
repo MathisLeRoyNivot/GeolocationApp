@@ -1,6 +1,6 @@
 // GENERAL STYLE
 body {
-    height: 100%;
+    height: 100vh;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -43,11 +43,12 @@ h3 {
 }
 
 #myCurrentPos {
-    height: 30vh;
+    height: 25vh;
 }
 
 #myLastPos {
-    height: 70vh;
+    height: 65vh;
+    margin-bottom: 0px;
 }
 
 #myLastPos,
@@ -77,32 +78,47 @@ table {
     .main-container {
         display: block;
         height: 100vh;
-    } // MAP STYLE
+    } 
+    
+    // MAP STYLE
     #map {
-        height: 70vh;
+        height: 100vh;
         width: 100%;
     }
+
     #map-canvas {
         height: 100%;
         width: 100%;
     } // PANEL STYLE
     .left-panel {
         width: 100%;
-        h3 {
-            text-align: center;
-            font-size: 4vh;
-        }
     }
+
+    h3 {
+        text-align: center;
+        font-size: 1em;
+    }
+    
     #btn-find {
+        margin-top: 30px;
         z-index: 1;
-        width: 100%;
     }
+
+    #myLastPos,
+    #myCurrentPos {
+        display: none;
+    }
+
+    #map {
+        display: none;
+    }
+
     select {
         height: 40px;
         width: 60%;
     }
     table {
         margin: 0 auto;
-        max-width: 90%
+        width: 100%
     }
 }

@@ -1,5 +1,5 @@
 body {
-  height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -44,11 +44,12 @@ h3 {
 }
 
 #myCurrentPos {
-  height: 30vh;
+  height: 25vh;
 }
 
 #myLastPos {
-  height: 70vh;
+  height: 65vh;
+  margin-bottom: 0px;
 }
 
 #myLastPos,
@@ -78,7 +79,7 @@ table {
     height: 100vh;
   }
   #map {
-    height: 70vh;
+    height: 100vh;
     width: 100%;
   }
   #map-canvas {
@@ -88,13 +89,20 @@ table {
   .left-panel {
     width: 100%;
   }
-  .left-panel h3 {
+  h3 {
     text-align: center;
-    font-size: 4vh;
+    font-size: 1em;
   }
   #btn-find {
+    margin-top: 30px;
     z-index: 1;
-    width: 100%;
+  }
+  #myLastPos,
+  #myCurrentPos {
+    display: none;
+  }
+  #map {
+    display: none;
   }
   select {
     height: 40px;
@@ -102,7 +110,7 @@ table {
   }
   table {
     margin: 0 auto;
-    max-width: 90%;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */
